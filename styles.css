@@ -10,11 +10,12 @@ body{
     height: 480px;
     width: 480px;
     display: flex;
+    flex-wrap: wrap;
 }
 
-div {
-    border-style: solid;
-    border-color: red;
+.dots {
+    background-color: red;
     width: 30px;
     height: 30px;
+    border: 0px;
 }

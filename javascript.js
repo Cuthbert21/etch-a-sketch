@@ -1,5 +1,11 @@
 const container = document.querySelector(".container");
 
-const div = document.createElement("div");
+for (let i=0; i<256; i++){
 
-container.appendChild(div);
+    const div = document.createElement("div");
+
+    div.className = "dots"
+
+    container.appendChild(div);
+
+}
