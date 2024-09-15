@@ -6,6 +6,10 @@ for (let i=0; i<256; i++){
 
     div.className = "dots"
 
+    div.addEventListener("mouseover", (event) => {
+        div.style.backgroundColor = "black"
+    });
+
     container.appendChild(div);
 
 }
