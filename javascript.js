@@ -21,8 +21,11 @@ for (let i=0; i<256; i++){
 
 const btn = document.querySelector("#btn");
     btn.addEventListener("click", () => {
+        while (true) {
     let input = parseInt(prompt("Enter a number between 1-100", "64"));
-    let result = input * input;
+    if (input > 0 && input < 101) {
+        console.log('Correct!');
+        let result = input * input;
     let size = 480 / input;
     container.innerHTML = '';
 
@@ -46,4 +49,8 @@ const btn = document.querySelector("#btn");
         container.appendChild(div);
     
     }
+        break;
+      }
+    }
+    
 });
