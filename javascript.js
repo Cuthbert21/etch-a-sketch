@@ -6,9 +6,16 @@ for (let i=0; i<256; i++){
 
     div.className = "dots"
 
+    let opacity = 0;
+
     div.addEventListener("mouseover", (event) => {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
-        div.style.backgroundColor = `#${randomColor}`
+        let divOpacity = div.style.opacity;
+        console.log("Old value " + divOpacity);
+        div.style.backgroundColor = `black`;
+        div.style.opacity = `${divOpacity += 0.1}`;
+        let divNewOpacity = div.style.opacity;
+        console.log("New value " + divNewOpacity);
     });
 
     container.appendChild(div);
