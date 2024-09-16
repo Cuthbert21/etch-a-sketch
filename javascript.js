@@ -7,7 +7,8 @@ for (let i=0; i<256; i++){
     div.className = "dots"
 
     div.addEventListener("mouseover", (event) => {
-        div.style.backgroundColor = "black"
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        div.style.backgroundColor = `#${randomColor}`
     });
 
     container.appendChild(div);
@@ -16,7 +17,7 @@ for (let i=0; i<256; i++){
 
 const btn = document.querySelector("#btn");
     btn.addEventListener("click", () => {
-    let input = parseInt(prompt("Enter a number between 1-100", "16"));
+    let input = parseInt(prompt("Enter a number between 1-100", "64"));
     let result = input * input;
     let size = 480 / input;
     container.innerHTML = '';
@@ -30,7 +31,8 @@ const btn = document.querySelector("#btn");
         div.setAttribute("style", `height: ${size}px; width: ${size}px;`);
     
         div.addEventListener("mouseover", (event) => {
-            div.style.backgroundColor = "black"
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        div.style.backgroundColor = `#${randomColor}`
         });
     
         container.appendChild(div);
